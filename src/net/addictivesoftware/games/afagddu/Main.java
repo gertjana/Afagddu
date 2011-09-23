@@ -6,15 +6,19 @@ import com.jme3.math.ColorRGBA;
 import com.jme3.math.Vector3f;
 import com.jme3.renderer.RenderManager;
 import com.jme3.scene.Geometry;
-import com.jme3.scene.shape.Box;
 import com.jme3.scene.shape.Sphere;
+import net.addictivesoftware.games.afagddu.model.Planet;
+
+import net.addictivesoftware.games.afagddu.model.Star;
+import net.addictivesoftware.games.afagddu.model.Station;
 
 /**
  * test
  * @author normenhansen
  */
 public class Main extends SimpleApplication {
-
+    private Star currentSystem;
+    
     public static void main(String[] args) {
         Main app = new Main();
         app.start();
@@ -22,23 +26,21 @@ public class Main extends SimpleApplication {
 
     @Override
     public void simpleInitApp() {
-        Sphere p = new Sphere(20,20, 1);
-        Geometry geom = new Geometry("Planet", p);
-        geom.setLocalTranslation(Vector3f.ZERO);
-        Material mat = new Material(assetManager, "Common/MatDefs/Misc/SolidColor.j3md");
-        mat.setColor("m_Color", ColorRGBA.Blue);
-        geom.setMaterial(mat);
-
-        rootNode.attachChild(geom);
+        currentSystem = StarLoader.load("assets/Scenes/Sun.xml");
+        System.out.println(currentSystem.getName());
+        for (Planet planet : currentSystem.getPlanets()) {
+            System.out.println(" " + planet.getName());
+            for (Station station : planet.getStations()) {
+                System.out.println("  " + station.getName());
+            }
+        }
     }
 
     @Override
     public void simpleUpdate(float tpf) {
-        //TODO: add update code
     }
 
     @Override
     public void simpleRender(RenderManager rm) {
-        //TODO: add render code
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<System xmlns="http://www.addictivesoftware.net/afagddu"
+<Star xmlns="http://www.addictivesoftware.net/afagddu"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.addictivesoftware.net/afagddu System.xsd">>
     <Name>Sun</Name>
@@ -9,6 +9,12 @@
         <Planet>
             <Name>Earth</Name>
             <Description>our own planet</Description>
+            <Stations>
+                <Station>
+                    <Name>Earth Orbital One</Name>
+                    <Description>bla</Description>
+                </Station>
+            </Stations>
         </Planet>
         <Planet>
             <Name>Venus</Name>
@@ -19,6 +25,6 @@
             <Description>and another planet</Description>
         </Planet>
     </Planets>
-</System>
+</Star>
 
 

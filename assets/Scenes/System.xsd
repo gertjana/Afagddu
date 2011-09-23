@@ -4,23 +4,49 @@
             xmlns="http://www.addictivesoftware.net/afagddu"
             elementFormDefault="qualified">
                 
-    <xs:element name="System">
+    <xs:element name="Star">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Name" type="xs:string"/>
+                <xs:element name="Name" type="xs:string" />
                 <xs:element name="Description" type="xs:string"/>
-                <xs:element name="Planets" type="Planet"/>
+                <xs:group ref="Planets" minOccurs="1" maxOccurs="unbounded" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="Planet">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="Name" type="xs:string"/>
-                <xs:element name="Description" type="xs:string"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+    <xs:group name="Planets">
+        <xs:sequence>
+            <xs:element name="Planet" type="Planet" />
+        </xs:sequence> 
+    </xs:group>
 
+    <xs:complexType name="Planet">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Description" type="xs:string"/>
+            <xs:element name="Position" type="Position" />
+            <xs:group ref="Stations" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:group name="Stations">
+        <xs:sequence>
+            <xs:element name="Station" type="Station" />
+        </xs:sequence> 
+    </xs:group>
+
+    <xs:complexType name="Station">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Description" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Position">
+        <xs:attribute name="x" type="xs:float" />
+        <xs:attribute name="y" type="xs:float" />
+        <xs:attribute name="z" type="xs:float" />
+    </xs:complexType>
+    
+    
 </xs:schema>
