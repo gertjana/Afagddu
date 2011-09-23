@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<System xmlns="http://www.addictivesoftware.net/afagddu"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.addictivesoftware.net/afagddu System.xsd">>
+    <Name>Sun</Name>
+    <Description>our own galaxy</Description>
+    <Planets>
+        <Planet>
+            <Name>Earth</Name>
+            <Description>our own planet</Description>
+        </Planet>
+        <Planet>
+            <Name>Venus</Name>
+            <Description>another planet</Description>
+        </Planet>
+        <Planet>
+            <Name>Mercury</Name>
+            <Description>and another planet</Description>
+        </Planet>
+    </Planets>
+</System>
+
+
