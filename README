@@ -1,0 +1,4 @@
+To get started:
+ - download jMonkeyPlatform http://jmonkeyengine.org/downloads/ 
+ - install and set it to update from the nightly builds
+ - clone this repository and open it from jMonkeyPlatform
