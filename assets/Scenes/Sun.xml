@@ -2,29 +2,33 @@
 
 <Star xmlns="http://www.addictivesoftware.net/afagddu"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.addictivesoftware.net/afagddu System.xsd">>
+        xsi:schemaLocation="http://www.addictivesoftware.net/afagddu System.xsd">
     <Name>Sun</Name>
     <Description>our own galaxy</Description>
-    <Planets>
-        <Planet>
-            <Name>Earth</Name>
-            <Description>our own planet</Description>
-            <Stations>
-                <Station>
-                    <Name>Earth Orbital One</Name>
-                    <Description>bla</Description>
-                </Station>
-            </Stations>
-        </Planet>
-        <Planet>
-            <Name>Venus</Name>
-            <Description>another planet</Description>
-        </Planet>
-        <Planet>
-            <Name>Mercury</Name>
-            <Description>and another planet</Description>
-        </Planet>
-    </Planets>
+    <RenderInfo size="1" color="Yellow" matdef="" />
+    <Planet>
+        <Name>Earth</Name>
+        <Description>our own planet</Description>
+        <Position x="10" y="0" z="10" />
+        <RenderInfo size="2" color="Blue" matdef="" />
+        <Station>
+            <Name>Earth Orbital One</Name>
+            <Description>bla</Description>
+            <Position x="1" y="0" z="1" />
+        </Station>
+    </Planet>
+    <Planet>
+        <Name>Venus</Name>
+        <Description>another planet</Description>
+        <Position x="-4" y="0" z="-4" />
+        <RenderInfo size="1" color="Orange" matdef="" />
+    </Planet>
+    <Planet>
+        <Name>Mercury</Name>
+        <Description>and another planet</Description>
+        <Position x="2" y="0" z="-2" />
+        <RenderInfo size="0.5" color="Gray" matdef="" />
+    </Planet>-->
 </Star>
 
 

@@ -15,17 +15,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Position complex type.
+ * <p>Java class for RenderInfo complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Position">
+ * &lt;complexType name="RenderInfo">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;attribute name="x" type="{http://www.w3.org/2001/XMLSchema}float" />
- *       &lt;attribute name="y" type="{http://www.w3.org/2001/XMLSchema}float" />
- *       &lt;attribute name="z" type="{http://www.w3.org/2001/XMLSchema}float" />
+ *       &lt;attribute name="size" type="{http://www.w3.org/2001/XMLSchema}float" />
+ *       &lt;attribute name="matdef" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="color" type="{http://www.w3.org/2001/XMLSchema}string" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -34,86 +34,86 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Position")
-public class Position {
+@XmlType(name = "RenderInfo")
+public class RenderInfo {
 
     @XmlAttribute
-    protected Float x;
+    protected Float size;
     @XmlAttribute
-    protected Float y;
+    protected String matdef;
     @XmlAttribute
-    protected Float z;
+    protected String color;
 
     /**
-     * Gets the value of the x property.
+     * Gets the value of the size property.
      * 
      * @return
      *     possible object is
      *     {@link Float }
      *     
      */
-    public Float getX() {
-        return x;
+    public Float getSize() {
+        return size;
     }
 
     /**
-     * Sets the value of the x property.
+     * Sets the value of the size property.
      * 
      * @param value
      *     allowed object is
      *     {@link Float }
      *     
      */
-    public void setX(Float value) {
-        this.x = value;
+    public void setSize(Float value) {
+        this.size = value;
     }
 
     /**
-     * Gets the value of the y property.
+     * Gets the value of the matdef property.
      * 
      * @return
      *     possible object is
-     *     {@link Float }
+     *     {@link String }
      *     
      */
-    public Float getY() {
-        return y;
+    public String getMatdef() {
+        return matdef;
     }
 
     /**
-     * Sets the value of the y property.
+     * Sets the value of the matdef property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Float }
+     *     {@link String }
      *     
      */
-    public void setY(Float value) {
-        this.y = value;
+    public void setMatdef(String value) {
+        this.matdef = value;
     }
 
     /**
-     * Gets the value of the z property.
+     * Gets the value of the color property.
      * 
      * @return
      *     possible object is
-     *     {@link Float }
+     *     {@link String }
      *     
      */
-    public Float getZ() {
-        return z;
+    public String getColor() {
+        return color;
     }
 
     /**
-     * Sets the value of the z property.
+     * Sets the value of the color property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Float }
+     *     {@link String }
      *     
      */
-    public void setZ(Float value) {
-        this.z = value;
+    public void setColor(String value) {
+        this.color = value;
     }
 
 }

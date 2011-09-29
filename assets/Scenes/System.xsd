@@ -6,9 +6,10 @@
                 
     <xs:element name="Star">
         <xs:complexType>
-            <xs:sequence>
+            <xs:sequence minOccurs="1" maxOccurs="1">
                 <xs:element name="Name" type="xs:string" />
                 <xs:element name="Description" type="xs:string"/>
+                <xs:element name="RenderInfo" type="RenderInfo" />
                 <xs:group ref="Planets" minOccurs="1" maxOccurs="unbounded" />
             </xs:sequence>
         </xs:complexType>
@@ -26,6 +27,7 @@
             <xs:element name="Description" type="xs:string"/>
             <xs:element name="Position" type="Position" />
             <xs:group ref="Stations" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="RenderInfo" type="RenderInfo" />
         </xs:sequence>
     </xs:complexType>
     
@@ -39,6 +41,8 @@
         <xs:sequence>
             <xs:element name="Name" type="xs:string"/>
             <xs:element name="Description" type="xs:string"/>
+            <xs:element name="Position" type="Position" />
+            <xs:element name="RenderInfo" type="RenderInfo" />
         </xs:sequence>
     </xs:complexType>
     
@@ -48,5 +52,9 @@
         <xs:attribute name="z" type="xs:float" />
     </xs:complexType>
     
-    
+    <xs:complexType name="RenderInfo">
+        <xs:attribute name="size" type="xs:float"/>
+        <xs:attribute name="matdef" type="xs:string"/>
+        <xs:attribute name="color" type="xs:string"/>
+    </xs:complexType>
 </xs:schema>
